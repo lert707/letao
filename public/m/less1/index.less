@@ -1,0 +1,95 @@
+@import 'base.less';
+body{
+	background-color: #fff;
+}
+/* 主页的导航条样式 */
+#nav{
+	padding: 10px;
+	.mui-row{
+		>div{
+			>a{
+				display: block;
+				>img{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* 主页的广告区域样式 */
+#banner{
+	padding: 0 10px;
+	.mui-row{
+		a{
+			display: block;
+			>img{
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* 主页的品牌专区样式 */
+#brand-area{
+	padding: 10px;
+	.brand-title{
+		display: block;
+		>img{
+			width: 100%;
+		}
+	}
+	.mui-row{
+		>div{
+			>a{
+				display: block;
+				>img{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* 主页的运动专区样式 */
+#sport-area,#man-area,#women-area{
+	padding: 10px;
+	.brand-title{
+		display: block;
+		>img{
+			width: 100%;
+		}
+	}
+	.mui-row{
+		>div{
+			padding: 5px;
+			.product{
+				padding: 5px;
+				box-shadow: 0px 0px 5px #ccc;
+				text-align: center;
+				.product-img{
+					display: block;
+					>img{
+						width: 100%;
+					}
+				}
+				.product-name{
+					/* 给父元素加固定高度 行高是父元素高度的一半  父元素高度范围内只能显示2行 超出部分隐藏溢出 */
+					height: 40px;
+					line-height: 20px;
+					overflow: hidden;
+				}
+				.product-price{
+					font-size: 12px;
+					.new-price{
+						color:red;
+					}
+					.old-price{
+						color:#ccc;
+					}
+				}
+				.product-buy{}
+			}
+		}
+	}
+}
