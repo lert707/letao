@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>乐淘淘</title>
+	<link rel="icon" href="images/favicon.ico">
+
+	<link rel="stylesheet" href="./lib/mui/css/mui.css">
+	<link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+	<link rel="stylesheet/less" href="./less/search.less">
+	<script src="./lib/less/less.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<header id="header">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>
+		<span class="title">搜索中心</span>
+	</header>
+
+	<main id='main'>
+		<div class="search-form">
+			<form action="#">
+				<input class='input-search' type="text" placeholder="请输入关键字">
+				<a class='mui-btn mui-btn-primary btn-search' href="#">搜索</a>
+			</form>
+		</div>
+
+		<div class="history">
+			<div class="title">
+				<span>搜索历史</span>
+				<span class="btn-clear fa fa-trash mui-pull-right"></span>
+			</div>
+			<ul>
+				
+			</ul>
+		</div>
+	</main>	
+
+	<!-- 底部导航 -->
+	<footer id="footer">
+		<div class="mui-row">
+			<div class="mui-col-xs-3">
+				<a href="./index.html" class="fa fa-home">
+					首页
+				</a>
+			</div>
+			<div class="mui-col-xs-3">
+				<a href="./category.html" class="fa fa-bars">
+					分类
+				</a>
+			</div>
+			<div class="mui-col-xs-3">
+				<a href="" class="fa fa-shopping-cart">
+					购物车
+				</a>
+			</div>
+			<div class="mui-col-xs-3">
+				<a href="" class="fa fa-user">
+					用户中心
+				</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<script id='historyTmp' type='text/html'>
+		{{each rows as value i}}
+			<li>
+				<a href="#">
+					<span>{{value.search}}</span>
+					<i class='fa fa-times btn-delete mui-pull-right' data-id='{{value.id}}'></i>
+				</a>
+			</li>
+		{{/each}}
+	</script>
+
+	<script src="./lib/zepto/zepto.min.js"></script>
+	<script src="./lib/artTemplate/template.js"></script>
+	<script src="./lib/mui/js/mui.js"></script>
+	<script src="./js/search.js"></script>
+</body>
+</html>
